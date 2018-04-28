@@ -1,6 +1,6 @@
 # gem_home
 
-Changes your `$GEM_HOME`.
+Changes your `$GEM_HOME` in [fish shell]
 
 # Inspiration
 
@@ -14,7 +14,7 @@ Changes your `$GEM_HOME`.
   * Prepends the new `$GEM_HOME/bin` to `$PATH` so it takes precedence.
 * Compartmentalizes gems into `.gem/$ruby_engine/$ruby_version`.
 * Plays nicely with [RVM] and [chruby].
-* Supports [fish].
+* For [fish shell]
 
 ## Synopsis
 
@@ -72,4 +72,4 @@ source /usr/local/share/gem_home/gem_home.fish
 [RVM]: https://rvm.io/
 [chruby]: https://github.com/postmodern/chruby#readme
 
-[fish]: https://fishshell.com/
+[fish shell]: https://fishshell.com/

@@ -54,6 +54,21 @@ Using with bundler:
 * Notice how bundler re-used many of the gems from `~/.gem/...` but installed
   missing gems into `$PWD/.gem/...`.
 
+## Install
+
+    wget -O gem_home-0.1.0.tar.gz https://github.com/rjkaes/gem_home/archive/v0.1.0.tar.gz
+    tar -xzvf gem_home-0.1.0.tar.gz
+    cd gem_home-0.1.0/
+    sudo make install
+
+### PGP
+
+All releases are [PGP] signed for security.  To verify that a release was not tampered 
+with:
+
+    wget https://raw.github.com/rjkaes/gem_home/master/pkg/gem_home-0.1.0.tar.gz.asc
+    gpg --verify gem_home-0.1.0.tar.gz.asc gem_home-0.1.0.tar.gz
+
 ## Configuration
 
 Add the following to your `~/.config/fish/config.fish`:
@@ -71,5 +86,7 @@ source /usr/local/share/gem_home/gem_home.fish
 
 [RVM]: https://rvm.io/
 [chruby]: https://github.com/postmodern/chruby#readme
+
+[PGP]: https://en.wikipedia.org/wiki/Pretty_Good_Privacy
 
 [fish shell]: https://fishshell.com/

@@ -43,7 +43,7 @@ verify: $(PKG) $(SIG)
 	gpg --verify $(SIG) $(PKG)
 
 clean:
-	rm -f $(PKG) $(SIG)
+	rm -f $(PKG)
 
 all: $(PKG) $(SIG)
 

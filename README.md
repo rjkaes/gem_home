@@ -56,9 +56,9 @@ Using with bundler:
 
 ## Install
 
-    wget -O gem_home-0.1.0.tar.gz https://github.com/rjkaes/gem_home/archive/v0.1.0.tar.gz
-    tar -xzvf gem_home-0.1.0.tar.gz
-    cd gem_home-0.1.0/
+    wget -O gem_home-0.1.2.tar.gz https://github.com/rjkaes/gem_home/archive/v0.1.2.tar.gz
+    tar -xzvf gem_home-0.1.2.tar.gz
+    cd gem_home-0.1.2/
     sudo make install
 
 ### PGP
@@ -66,8 +66,8 @@ Using with bundler:
 All releases are [PGP] signed for security.  To verify that a release was not tampered 
 with:
 
-    wget https://raw.github.com/rjkaes/gem_home/master/pkg/gem_home-0.1.0.tar.gz.asc
-    gpg --verify gem_home-0.1.0.tar.gz.asc gem_home-0.1.0.tar.gz
+    wget https://raw.github.com/rjkaes/gem_home/master/pkg/gem_home-0.1.2.tar.gz.asc
+    gpg --verify gem_home-0.1.2.tar.gz.asc gem_home-0.1.2.tar.gz
 
 ## Configuration
 

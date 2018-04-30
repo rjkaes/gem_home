@@ -1,18 +1,20 @@
 function gem_home_push
-    mkdir -p $argv ; and pushd $argv >/dev/null; or return 1
+    # Ensure the directory where the gems will be installed exists.
+    set -l gem_home (realpath "$argv"); or return 1
+    if not test -d "$gem_home"
+        echo "Not a directory: $argv" 2>&1
+        return 1
+    end
 
-    set -l ruby_engine_and_version (ruby -e 'puts "#{defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'} #{RUBY_VERSION}"')
-    set -l ruby_engine $ruby_engine_and_version[1]
-    set -l ruby_version $ruby_engine_and_version[2]
-    set -l gem_dir "$PWD/.gem/$ruby_engine/$ruby_version"
+    set -l ruby_engine (ruby -e "puts defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'")
+    set -l ruby_version (ruby -e "puts RUBY_VERSION")
+    set -l gem_dir "$gem_home/.gem/$ruby_engine/$ruby_version"
 
     test "$GEM_HOME" = "$gem_dir"; and return
 
     set -x GEM_HOME $gem_dir
     set -x GEM_PATH (string trim -r -c : $gem_dir:$GEM_PATH)
-    set -qx PATH $gem_dir/bin $PATH
-
-    popd >/dev/null
+    set -x PATH $gem_dir/bin $PATH
 end
 
 function gem_home_pop

@@ -47,6 +47,9 @@ clean:
 
 all: $(PKG) $(SIG)
 
+test:
+	./test/runner.fish
+
 tag:
 	git push origin master
 	git tag -s -m "Releasing $(VERSION)" v$(VERSION)
@@ -65,4 +68,4 @@ uninstall:
 	rm -rf $(DOC_DIR)
 	rmdir $(SHARE_DIR)
 
-.PHONY: build download sign verify clean check test tag release rpm install uninstall all
+.PHONY: build download sign verify clean check test tag release install uninstall all

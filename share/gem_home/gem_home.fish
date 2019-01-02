@@ -38,7 +38,7 @@ function gem_home_show
 end
 
 function gem_home
-    set -l gem_home_version "0.1.2"
+    set -l gem_home_version "0.1.3"
 
     # Show the current GEM_HOME in use if no arguments are supplied.
     test (count $argv) -eq 0; and gem_home_show; and return

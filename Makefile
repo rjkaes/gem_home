@@ -1,5 +1,5 @@
 NAME=gem_home
-VERSION=0.1.2
+VERSION=0.1.3
 AUTHOR=rjkaes
 URL=https://github.com/$(AUTHOR)/$(NAME)
 

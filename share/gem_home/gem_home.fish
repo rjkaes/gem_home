@@ -38,14 +38,14 @@ function gem_home_show
 end
 
 function gem_home
-    set -l version "0.1.2"
+    set -l gem_home_version "0.1.2"
 
     # Show the current GEM_HOME in use if no arguments are supplied.
     test (count $argv) -eq 0; and gem_home_show; and return
 
     switch $argv
         case -V --version
-            echo "gem_home: $version"
+            echo "gem_home: $gem_home_version"
         case -h --help
             echo "usage: gem_home [OPTIONS] [DIR|-]"
             echo
